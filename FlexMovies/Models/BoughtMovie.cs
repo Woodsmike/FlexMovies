@@ -16,8 +16,7 @@ namespace FlexMovies.Models
         public bool Bought { get; set; }
         public DateTime BoughtDate { get; set; }
 
-        [ForeignKey("Account")]
-        public int AccountID { get; set; }
+        
         public virtual ICollection<Account> Accounts { get; set; }
 
         [ForeignKey("List")]

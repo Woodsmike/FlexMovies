@@ -19,12 +19,10 @@ namespace FlexMovies.Models
         public string Rating { get; set; }
         public double Earnings { get; set; }
 
-        [ForeignKey("List")]
-        public int ListID { get; set; }
+        
         public virtual ICollection<List> Lists { get; set; }
 
-        [ForeignKey("Genre")]
-        public int GenreID { get; set; }
+        
         public virtual Genre Genre { get; set; }
     }
 }

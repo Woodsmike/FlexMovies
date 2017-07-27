@@ -1,0 +1,58 @@
+﻿@model FlexMovies.Models.BoughtMovie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BoughtMovie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.List.ListName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.List.ListName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiptNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiptNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostToBuy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostToBuy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bought)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bought)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoughtDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoughtDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BoughtMovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

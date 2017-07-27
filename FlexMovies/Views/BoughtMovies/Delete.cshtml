@@ -1,0 +1,64 @@
+﻿@model FlexMovies.Models.BoughtMovie
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BoughtMovie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.List.ListName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.List.ListName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiptNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiptNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostToBuy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostToBuy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bought)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bought)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoughtDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoughtDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

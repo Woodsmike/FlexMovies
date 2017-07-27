@@ -17,12 +17,10 @@ namespace FlexMovies.Models
         public DateTime ExpirationDate { get; set; } //Date the movie stops streaming
         public int TimesRented { get; set; }
 
-        [ForeignKey("Account")]
-        public int AccountID { get; set; }
+      
         public virtual ICollection<Account> Accounts { get; set; }
 
-        [ForeignKey("List")]
-        public int ListID { get; set; }
+        
         public virtual List List { get; set; }
     }
 }

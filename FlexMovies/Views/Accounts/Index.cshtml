@@ -1,0 +1,111 @@
+﻿@model IEnumerable<FlexMovies.Models.Account>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCSecCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalMoviesRented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmountRented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalAmountBought)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCSecCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalMoviesRented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmountRented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalAmountBought)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AccountID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AccountID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AccountID })
+        </td>
+    </tr>
+}
+
+</table>
