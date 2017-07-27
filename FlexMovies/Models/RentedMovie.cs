@@ -11,8 +11,7 @@ namespace FlexMovies.Models
     {
         [Key]
         public int RentedMovieID { get; set; }
-        public double ReceiptNumber { get; set; }
-        public bool Rented { get; set; }
+        public double ReceiptNumber { get; set; }        
         public double CostToRent { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime ExpirationDate { get; set; } //Date the movie stops streaming

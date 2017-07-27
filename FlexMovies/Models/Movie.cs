@@ -20,11 +20,11 @@ namespace FlexMovies.Models
         public double Earnings { get; set; }
 
         [ForeignKey("List")]
-        public int ListId { get; set; }
+        public int ListID { get; set; }
         public virtual ICollection<List> Lists { get; set; }
 
         [ForeignKey("Genre")]
-        public int GenreId { get; set; }
+        public int GenreID { get; set; }
         public virtual Genre Genre { get; set; }
     }
 }
